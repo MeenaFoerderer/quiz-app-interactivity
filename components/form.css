@@ -1,0 +1,27 @@
+.form {
+  padding: 10rem 2rem 4rem 2rem;
+  max-width: 45rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.form__textfield {
+  height: 10em;
+}
+
+.form__tag {
+  height: 3em;
+}
+
+.submit-btn {
+  margin-top: 2em;
+  width: fit-content;
+  align-self: center;
+  padding: 1em 3em;
+}
+
+.add-icon {
+  width: 24px;
+}
