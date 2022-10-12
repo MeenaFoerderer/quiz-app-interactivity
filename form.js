@@ -1,5 +1,11 @@
 const form = document.querySelector('[data-js="form"]');
 const main = document.querySelector("main");
+const questionCounter = document.querySelector(
+  '[data-js="form__display--question"]'
+);
+const answerCounter = document.querySelector(
+  '[data-js="form__display--answer"]'
+);
 
 /* ---------- eventlistener to submit form data ----------- */
 form.addEventListener("submit", (event) => {
@@ -77,3 +83,19 @@ function addNewCard(question, answer, tags) {
   //append elements below the form
   main.append(cardList);
 }
+
+/* ----------- eventlisteners to calculate left characters ---------- */
+
+form.form__question.addEventListener("input", (event) => {
+  event.preventDefault();
+
+  const leftCharacters = 150 - Number(form__question.value.length);
+  questionCounter.textContent = `Characters left: ${leftCharacters}`;
+});
+
+form.form__answer.addEventListener("input", (event) => {
+  event.preventDefault();
+
+  const leftCharacters = 150 - Number(form__answer.value.length);
+  answerCounter.textContent = `Characters left: ${leftCharacters}`;
+});

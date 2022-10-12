@@ -25,3 +25,9 @@
 .add-icon {
   width: 24px;
 }
+
+.form__display {
+  align-self: flex-end;
+  width: fit-content;
+  color: darkgray;
+}
